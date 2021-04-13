@@ -176,6 +176,7 @@ namespace Calculator
 			// 
 			this.textBoxOutput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.textBoxOutput.Font = new System.Drawing.Font("Georgia", 45F);
+			this.textBoxOutput.ForeColor = System.Drawing.SystemColors.Window;
 			this.textBoxOutput.Location = new System.Drawing.Point(12, 22);
 			this.textBoxOutput.Name = "textBoxOutput";
 			this.textBoxOutput.Size = new System.Drawing.Size(318, 76);
