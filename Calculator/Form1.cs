@@ -50,9 +50,10 @@ namespace Calculator
 			c = ' ';
 		}
 
-		public void Roll()
+		public void Roll(int sides)
 		{
-
+			var rand = new Random();
+			textBoxOutput.Text = (rand.Next(1, sides + 1)).ToString();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -131,33 +132,21 @@ namespace Calculator
 		}
 
 		private void buttond4_Click(object sender, EventArgs e)
-		{
-
-		}
+		{ Roll(4); }
 
 		private void buttond6_Click(object sender, EventArgs e)
-		{
-
-		}
+		{ Roll(6); }
 
 		private void buttond8_Click(object sender, EventArgs e)
-		{
-
-		}
+		{ Roll(8); }
 
 		private void buttond10_Click(object sender, EventArgs e)
-		{
-
-		}
+		{ Roll(10); }
 
 		private void buttond12_Click(object sender, EventArgs e)
-		{
-
-		}
+		{ Roll(12); }
 
 		private void buttond20_Click(object sender, EventArgs e)
-		{
-
-		}
+		{ Roll(20); }
 	}
 }

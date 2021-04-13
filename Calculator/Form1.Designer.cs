@@ -179,6 +179,7 @@ namespace Calculator
 			this.textBoxOutput.ForeColor = System.Drawing.SystemColors.Window;
 			this.textBoxOutput.Location = new System.Drawing.Point(12, 22);
 			this.textBoxOutput.Name = "textBoxOutput";
+			this.textBoxOutput.ReadOnly = true;
 			this.textBoxOutput.Size = new System.Drawing.Size(318, 76);
 			this.textBoxOutput.TabIndex = 9;
 			// 
