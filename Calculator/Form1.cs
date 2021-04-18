@@ -19,11 +19,13 @@ namespace Calculator
 		float num = 0;
 		char c = ' ';
 
+		//Concatenates string with displayed text, and updates display
 		public void Display(string key)
 		{
 			textBoxOutput.Text = textBoxOutput.Text + key;
 		}
 
+		//Performs basic maths operations, displays output
 		public void Calculate()
 		{
 			if (c == '+')
@@ -44,18 +46,21 @@ namespace Calculator
 			}
 		}
 
+		//Clears output
 		public void Clear()
 		{
 			textBoxOutput.Text = "";
 			c = ' ';
 		}
 
+		//Simulates rolling a polyhedral die (As used in tabletop RPG games)
 		public void Roll(int sides)
 		{
 			var rand = new Random();
 			textBoxOutput.Text = (rand.Next(1, sides + 1)).ToString();
 		}
 
+		//Button event handlers, pass appropriate string to display method
 		private void button1_Click(object sender, EventArgs e)
 		{ Display("1"); }
 
@@ -89,11 +94,13 @@ namespace Calculator
 		private void buttonDecimal_Click(object sender, EventArgs e)
 		{ Display("."); }
 
+		//Calls calculate method when equals button is clicked
 		private void buttonEquals_Click(object sender, EventArgs e)
 		{
 			Calculate();
 		}
 
+		//Clears display, saves last displayed float, and intended maths operation
 		private void buttonAdd_Click(object sender, EventArgs e)
 		{
 			num = float.Parse(textBoxOutput.Text);
@@ -101,7 +108,6 @@ namespace Calculator
 			textBoxOutput.Focus();
 			c = '+';
 		}
-
 		private void buttonSubtract_Click(object sender, EventArgs e)
 		{
 			num = float.Parse(textBoxOutput.Text);
@@ -109,7 +115,6 @@ namespace Calculator
 			textBoxOutput.Focus();
 			c = '-';
 		}
-
 		private void buttonMultiply_Click(object sender, EventArgs e)
 		{
 			num = float.Parse(textBoxOutput.Text);
@@ -117,7 +122,6 @@ namespace Calculator
 			textBoxOutput.Focus();
 			c = 'x';
 		}
-
 		private void buttonDivide_Click(object sender, EventArgs e)
 		{
 			num = float.Parse(textBoxOutput.Text);
@@ -126,11 +130,13 @@ namespace Calculator
 			c = '/';
 		}
 
+		//Calls clear method to clear output
 		private void buttonClear_Click(object sender, EventArgs e)
 		{
 			Clear();
 		}
 
+		//Rollplaying dice event handlers
 		private void buttond4_Click(object sender, EventArgs e)
 		{ Roll(4); }
 
